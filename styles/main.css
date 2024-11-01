@@ -26,7 +26,7 @@ body {
 }
 
 .quotation-container {
-  width: 100%;
+  width: 98%;
   max-width: 1200px; /* Set a max-width for larger screens */
   margin: 20px auto;
   background-color: #fff;
@@ -51,9 +51,9 @@ body {
 }
 
 .quotation-header .name {
-  max-width: 45ch;
+  max-width: 40ch;
   margin-left: -32px;
-  letter-spacing: 5px;
+  letter-spacing: 3px;
   
 }
 
@@ -223,6 +223,7 @@ button:hover {
 /* Foooter sectoion */
 
 footer {
+  margin-top: 200px;
   display: flex;
   justify-content: space-between;
 }

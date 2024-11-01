@@ -23,9 +23,9 @@ document.addEventListener("DOMContentLoaded", function () {
       row.innerHTML = `
                 <td>${itemCount}</td>
                 <td>${description}</td>
-                <td>${measurements}</td>
-                <td>${quantity}</td>
-                <td>${unitPrice.toLocaleString()}</td>
+                <td>${""}</td>
+                <td>${""}</td>
+                <td>${""}</td>
                 <td>${total.toLocaleString()}</td>
             `;
 
