@@ -2,11 +2,12 @@ document.addEventListener("DOMContentLoaded", function () {
   const tableBody = document.querySelector("#quotationTable tbody");
   const grandTotalEl = document.getElementById("grandTotal");
   const subtotalEl = document.getElementById("subtotal");
+  const dateElement = document.getElementById("currentDate");
 
   let subtotal = 0;
-  let grandTotal = 0;
   let itemCount = 0;
 
+  // Function to add a new item to the table
   window.addItem = function () {
     const description = document.getElementById("description").value;
     const measurements = document.getElementById("measurements").value;
@@ -15,28 +16,23 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (description && measurements && quantity > 0 && unitPrice > 0) {
       const total = quantity * unitPrice;
-      subtotal += total; // Add to subtotal
-
+      subtotal += total;
       itemCount++;
 
       const row = document.createElement("tr");
       row.innerHTML = `
-                <td>${itemCount}</td>
-                <td>${description}</td>
-                <td>${""}</td>
-                <td>${""}</td>
-                <td>${""}</td>
-                <td>${total.toLocaleString()}</td>
-            `;
-
+        <td>${itemCount}</td>
+        <td>${description}</td>
+        <td>${measurements}</td>
+        <td>${quantity}</td>
+        <td>${unitPrice.toLocaleString()}</td>
+        <td>${total.toLocaleString()}</td>
+      `;
       tableBody.appendChild(row);
 
-      // Update subtotal
+      // Update subtotal and grand total displays
       subtotalEl.textContent = subtotal.toLocaleString();
-
-      // Update grand total
-      grandTotal = subtotal; // Update grand total (here you can add tax, etc., if needed)
-      grandTotalEl.textContent = grandTotal.toLocaleString();
+      grandTotalEl.textContent = subtotal.toLocaleString();
 
       // Clear input fields
       document.getElementById("description").value = "";
@@ -48,6 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   };
 
+  // Function to download the quotation as PDF
   window.downloadQuotation = function () {
     const element = document.getElementById("quotationContent");
     const formSection = document.querySelector(".form");
@@ -71,19 +68,11 @@ document.addEventListener("DOMContentLoaded", function () {
         addItemButton.style.display = "block";
       });
   };
-});
 
-document.addEventListener("DOMContentLoaded", function () {
-  const dateElement = document.getElementById("currentDate");
-
-  // Create a new Date object
+  // Display current date in YYYY-MM-DD format
   const today = new Date();
-
-  // Format the date as YYYY-MM-DD (or customize it as needed)
-  const formattedDate = today.getFullYear() + "-" + 
-                        String(today.getMonth() + 1).padStart(2, '0') + "-" + 
+  const formattedDate = today.getFullYear() + "-" +
+                        String(today.getMonth() + 1).padStart(2, '0') + "-" +
                         String(today.getDate()).padStart(2, '0');
-
-  // Display the date in the element
   dateElement.textContent = formattedDate;
 });
