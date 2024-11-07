@@ -16,7 +16,7 @@
     <div id="quotationContent" class="quotation-container">
       <header class="quotation-header">
         <div class="name">
-          <h1>Marachi Welding <br>And Fabrication</h1>
+          <h1>Marachi Welding <br />And Fabrication</h1>
         </div>
         <div class="logo">
           <img src="./assets/logo.jpeg" alt="Company Logo" />
@@ -33,7 +33,12 @@
       <div class="quotation-details">
         <div class="quotation-number">
           <h2>Quotation Number:</h2>
-          <p>MCMF-004</p>
+          <input
+            required
+            type="text"
+            id="invoiceNumber"
+            placeholder="Enter quotation number"
+          />
         </div>
         <div class="quotation-date">
           <h2>Quotation Date:</h2>
@@ -43,9 +48,7 @@
           <h2>Company Details:</h2>
           <p>Mla Chake, Ruiru, 1799</p>
           <p>Contact: 0721627387</p>
-          <p>
-            Website: <a href="#">marachifabrications.com</a>
-          </p>
+          <p>Website: <a href="#">marachifabrications.com</a></p>
         </div>
       </div>
 
@@ -126,9 +129,7 @@
         <div class="quotation-total">
           <p>SUBTOTAL: <span id="subtotal">0.00</span></p>
           <p>TAX @ 0%: <span id="subtotal">0.00</span></p>
-          <p class="grand">
-            TOTAL: <span id="grandTotal">0.00</span>
-          </p>
+          <p class="grand">TOTAL: <span id="grandTotal">0.00</span></p>
         </div>
       </footer>
     </div>

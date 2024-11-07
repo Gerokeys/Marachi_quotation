@@ -87,6 +87,13 @@ body {
   padding-top: 20px;
 }
 
+.quotation-details input {
+  border: none;
+  outline: none;
+  font-size: 1em;
+  font-weight: 500;
+}
+
 .quotation-details h2 {
   font-size: 1em;
 }
