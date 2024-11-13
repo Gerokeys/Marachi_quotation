@@ -4,11 +4,6 @@
   box-sizing: border-box;
 }
 
-body {
-  font-family: "Times New Roman", Times, serif;
-  background-color: #f4f4f4;
-}
-
 @font-face {
   font-family: "coolvetica";
   src: url(/assets/coolvetica/coolvetica\ condensed\ rg.otf);
@@ -54,7 +49,7 @@ body {
   max-width: 40ch;
   margin-left: -32px;
   letter-spacing: 3px;
-  
+  font-family: 'Times New Roman', Times, serif;
 }
 
 .word {
