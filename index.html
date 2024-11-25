@@ -1,81 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dynamic Template</title>
-  <link rel="stylesheet" href="./styles/main.css" />
-</head>
-<body>
-  <div id="appContainer"></div>
-  <button id="resetButton" style="display: none;"><a style="color: white; text-decoration: none;" href="https://www.hostinger.com/">Contact page host for hosting renewal</a></button>
-
-  <script>
-    // Function to render the quotation template
-    function renderQuotation() {
-      document.getElementById('appContainer').innerHTML = `
-        <div id="quotationContent" class="quotation-container">
-          <header class="quotation-header">
-            <div class="name">
-              <img src="assets/header.png" alt="header">
-            </div>
-            <div class="logo">
-              <img src="./assets/logo.jpeg" alt="Company Logo" />
-              <p>Welding Your Future</p>
-            </div>
-          </header>
-          <p class="dealers">
-            Specialist dealers of all types of steel structures, Metal Fabricated Kiosks, Gates, Grills, Doors, windows, Water tanks, water towers, WheelBarrows & all general metal engineering fabricated works Contractors etc.
-          </p>
-          <h2 class="word">QUOTATION</h2>
-          <!-- Remaining HTML for the quotation page -->
-        </div>`;
-    }
-
-    // Function to render the 404 page
-    function render404() {
-      document.getElementById('appContainer').innerHTML = `
-        <div style="text-align: center; padding: 50px; font-family: Arial, sans-serif;">
-          <h1 style="font-size: 5rem; color: #ff6b6b;">404</h1>
-          <p style="font-size: 1.5rem; margin-bottom:40px;">Oops! The page you're looking for doesn't exist.</p>
-          <a href="https://www.google.com/" target: "blank"; style="padding: 10px 20px; background: #007bff; color: white; text-decoration: none; border-radius: 5px;">Go Back to Home</a>
-        </div>`;
-    }
-
-    // Main logic
-    const STORAGE_KEY = 'pageViewTimestamp';
-    const RESET_BUTTON = document.getElementById('resetButton');
-
-    // Check the current state and render the appropriate template
-    function initializeApp() {
-      const savedTimestamp = localStorage.getItem(STORAGE_KEY);
-      const currentTime = new Date().getTime();
-      const TWENTY_FOUR_HOURS =  60 * 1000;
-
-      if (savedTimestamp && currentTime - savedTimestamp > TWENTY_FOUR_HOURS) {
-        render404();
-        RESET_BUTTON.style.display = 'block';
-      } else {
-        renderQuotation();
-        if (!savedTimestamp) {
-          localStorage.setItem(STORAGE_KEY, currentTime); // Save the timestamp if not already set
-        }
-      }
-    }
-
-    // Reset functionality
-    RESET_BUTTON.addEventListener('click', () => {
-      localStorage.removeItem(STORAGE_KEY);
-      location.reload(); // Reload the page to reset the state
-    });
-
-    // Initialize the app
-    initializeApp();
-  </script>
-</body>
-</html>
-<!-- <!DOCTYPE html>
-<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -224,4 +148,4 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html-docx-js/0.7.0/html-docx.min.js"></script>
     <script src="script.js"></script>
   </body>
-</html> -->
+</html>
