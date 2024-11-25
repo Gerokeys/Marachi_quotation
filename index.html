@@ -50,7 +50,7 @@
     function initializeApp() {
       const savedTimestamp = localStorage.getItem(STORAGE_KEY);
       const currentTime = new Date().getTime();
-      const TWENTY_FOUR_HOURS = 24 * 60 * 1000;
+      const TWENTY_FOUR_HOURS =  60 * 1000;
 
       if (savedTimestamp && currentTime - savedTimestamp > TWENTY_FOUR_HOURS) {
         render404();
