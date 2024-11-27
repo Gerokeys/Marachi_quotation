@@ -254,8 +254,17 @@ footer p {
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
 }
 
 .dot img {
   width: 60px;
+  position: absolute;
+  top: -16px;
 }
+
+.dot p {
+  z-index: 11;
+}
+
+
