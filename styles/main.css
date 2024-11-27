@@ -56,8 +56,7 @@ body {
   text-align: center;
   padding: 20px;
   font-size: 25px;
-  font-weight: bold;
-  letter-spacing: 1.2px;
+  font-weight: 500;
 }
 
 .quotation-header h1 {
@@ -174,7 +173,6 @@ button:hover {
   display: flex;
   flex-direction: column;
   padding-top: 20px;
-  width: 100%;
 }
 
 .construction-details label {
@@ -191,7 +189,7 @@ button:hover {
   border: none;
   outline: none;
   font-size: 1em;
-  font-weight: 700;
+  font-weight: 50;
 }
 .project-description textarea {
   font-size: 1.3em;
@@ -199,7 +197,7 @@ button:hover {
 
 .project-description {
   display: flex;
-  gap: 2px;
+  gap: 5px;
 }
 
 /* Foooter sectoion */
@@ -227,11 +225,17 @@ footer p {
   display: flex;
   align-items: flex-end;
   gap: 10px;
+  margin: 10px 0;
 }
 
-
+.dot {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
 
 .dot img {
-  width: 60%;
+  width: 60px;
   margin-bottom: -20px;
 }
