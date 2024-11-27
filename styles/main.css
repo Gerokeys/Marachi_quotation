@@ -173,33 +173,12 @@ button:hover {
   display: flex;
   flex-direction: column;
   padding-top: 20px;
+  width: 100%;
 }
 
 .construction-details label {
   font-size: 1em;
   font-weight: 700;
-}
-
-.details-section {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 20px;
-}
-
-.details-section div {
-  width: 45%;
-}
-
-.details-section h3 {
-  font-size: 1.2rem;
-  margin-bottom: 10px;
-  color: #333;
-}
-
-.details-section p {
-  margin-bottom: 5px;
-  font-size: 0.9rem;
-  color: #555;
 }
 
 .client-name {
@@ -219,7 +198,7 @@ button:hover {
 
 .project-description {
   display: flex;
-  gap: 5px;
+  gap: 2px;
 }
 
 /* Foooter sectoion */
@@ -247,24 +226,11 @@ footer p {
   display: flex;
   align-items: flex-end;
   gap: 10px;
-  margin: 10px 0;
 }
 
-.dot {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
-}
+
 
 .dot img {
-  width: 60px;
-  position: absolute;
-  top: -16px;
+  width: 60%;
+  margin-bottom: -20px;
 }
-
-.dot p {
-  z-index: 11;
-}
-
-
